@@ -1,0 +1,13 @@
+﻿@model List<MaplrSugarSnack.Models.ProductType>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Syrups
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" asp-controller="Products">All</a>
+        @foreach (var productType in Model)
+        {
+            <a class="dropdown-item" asp-controller="Products" asp-route-productTypeId="@productType.Id">@productType.Name</a>
+        }
+    </div>
+</li>

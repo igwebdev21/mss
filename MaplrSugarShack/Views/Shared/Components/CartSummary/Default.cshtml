@@ -1,0 +1,8 @@
+﻿@model MaplrSugarSnack.Services.ICartItemRepository
+<li class="nav-item">
+    <a class="nav-link" asp-controller="Cart" asp-action="Index">
+        <i class="fas fa-shopping-cart"></i>
+        <span>@Model.GetCount()</span>
+    </a>
+</li>
+
